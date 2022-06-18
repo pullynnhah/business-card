@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
+
+body {
+  margin: 20px;
+  color: #dfd9d3;
+  font-family: "Montserrat", sans-serif;
+}
+
+.card {
+  width: 400px;
+  height: 250px;
+  position: relative;
+  text-align: center;
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  backface-visibility: hidden;
+  transition: all 0.5s;
+  transform-style: preserve-3d;
+}
+
+.back {
+  background: linear-gradient(#007fff, #ff74b2);
+  transform: rotateY(180deg);
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+
+.front {
+  background: linear-gradient(#007fff, #ff74b2);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+
+.card:hover .front {
+  transform: rotateY(-180deg);
+}
+
+img {
+  width: 110px;
+  border-radius: 20px;
+}
+
+h3 {
+  font-weight: 800;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 30px;
+}
+
+ion-icon {
+  font-size: 60px;
+}
+
+ion-icon:hover {
+  cursor: pointer;
+  color: #640202;
+}
+
+a {
+  margin: 0 20px;
+}
